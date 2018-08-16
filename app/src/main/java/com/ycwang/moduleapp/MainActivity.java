@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ARouter.getInstance().build("/test/myliba")
                         .withSerializable("obj", new TestObj("ycwang", "河北", 19))
-                        .greenChannel()
+//                        .greenChannel() // 无视拦截器
                         .navigation(MainActivity.this, 666);
             }
         });
