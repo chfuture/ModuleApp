@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ARouter.getInstance().build("/url/test")
-                        .withString("url", "来自main的url")
-                        .withString("title", "来自main的title").navigation();
+                        .withString("url", "来自MainActivity的URL")
+                        .withString("title", "来自MainActivity的TITLE").navigation();
             }
         });
 
@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ARouter.getInstance().build("/hello/mylib2")
-                        .withString("url", "牛逼好点撒")
-                        .withString("title", "答复哈咯")
+                        .withString("url", "来自MainActivity的URL")
+                        .withString("title", "来自MainActivity的TITLE")
                         .navigation();
             }
         });
@@ -50,10 +50,33 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ARouter.getInstance().build("/fragment/main").navigation();
+                ARouter.getInstance().build("/fragment/main").navigation(MainActivity.this,
+                        new NavCallback() {
+
+                            @Override
+                            public void onFound(Postcard postcard) {
+                                Log.e("ycwang", "onFound:找到了");
+                            }
+
+                            @Override
+                            public void onArrival(Postcard postcard) {
+                                Log.e("ycwang", "onArrival:跳转结束");
+                            }
+
+                            @Override
+                            public void onLost(Postcard postcard) {
+                                Log.e("ycwang", "onLost:找不到了");
+                            }
+
+                            @Override
+                            public void onInterrupt(Postcard postcard) {
+                                Log.e("ycwang", "onInterrupt:被拦截了");
+                            }
+
+
+                        });
             }
         });
-
 
 
     }

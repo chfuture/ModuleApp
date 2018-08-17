@@ -8,10 +8,6 @@ import android.support.v4.app.Fragment;
  */
 public class PagerConfig {
 
-    public static final String HOME = "com.ycwang.moduleapp.fragment.";
-    public static final String DISCOVERY = "com.ycwang.moduleapp.fragment.";
-    public static final String MY = "com.ycwang.moduleapp.fragment.";
-    public static final String OIL = "com.ycwang.moduleapp.fragment.";
 
     public static String[] FRAGMENT_NAME = new String[]
             {"HomeFragment", "DiscoveryFragment", "MyFragment", "OilFragment"};

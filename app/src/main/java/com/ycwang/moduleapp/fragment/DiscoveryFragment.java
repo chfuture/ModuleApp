@@ -1,13 +1,17 @@
 package com.ycwang.moduleapp.fragment;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ycwang.moduleapp.R;
 
-import butterknife.BindView;
 
 /**
  * @author ycwang.
@@ -15,24 +19,28 @@ import butterknife.BindView;
  */
 
 @Route(path = "/fragment/discovery")
-public class DiscoveryFragment extends BaseFragment {
+public class DiscoveryFragment extends Fragment {
     TextView txwFragment;
+    View view;
 
 
     public static Fragment getInstance() {
         return new DiscoveryFragment();
     }
 
-
-
+    @Nullable
     @Override
-    protected int getLayoutId() {
-        return R.layout.fragment_discovery;
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_discovery, container, false);
+        return view;
     }
 
     @Override
-    protected void afterActivityCreated(Bundle savedInstanceState) {
-        txwFragment= (TextView) findViewById(R.id.txw_fragment);
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        txwFragment = view.findViewById(R.id.txw_fragment);
         txwFragment.setText("Fragment Discovery");
     }
+
+
 }
