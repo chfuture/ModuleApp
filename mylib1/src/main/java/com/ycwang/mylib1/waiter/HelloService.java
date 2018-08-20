@@ -1,4 +1,4 @@
-package com.ycwang.baselib;
+package com.ycwang.mylib1.waiter;
 
 
 import com.alibaba.android.arouter.facade.template.IProvider;

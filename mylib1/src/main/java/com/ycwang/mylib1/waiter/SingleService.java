@@ -1,10 +1,9 @@
-package com.ycwang.mylib1;
+package com.ycwang.mylib1.waiter;
 
 import android.content.Context;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.ycwang.baselib.HelloService;
 
 /**
  * @author ycwang.
