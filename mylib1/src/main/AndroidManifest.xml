@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.BODY_SENSORS" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
 
     <application
@@ -15,9 +15,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MyLib1"></activity>
+        <activity android:name=".MyLib1"/>
         <activity android:name=".MyLibA" />
         <activity android:name=".permissioncheck.PermissionCheckActivity" />
+
+        <!-- WebUrl 跳转到本地页面的中转页 -->
+        <activity android:name=".webUrl.URLReceiveActivity">
+            <intent-filter>
+                <data
+                    android:host="ycwang"
+                    android:scheme="guotongshiyou" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+
+        </activity>
+        <activity android:name=".webUrl.NoCanReceiveURLActivity" />
+        <activity android:name=".webUrl.HasCanReceiveURLActivity" />
+        <activity android:name=".webUrl.WebActivity" />
     </application>
 
 </manifest>

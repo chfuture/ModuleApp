@@ -79,6 +79,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        findViewById(R.id.btn_5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ARouter.getInstance().build("/web/WebActivity").navigation();
+            }
+        });
+
     }
 
 

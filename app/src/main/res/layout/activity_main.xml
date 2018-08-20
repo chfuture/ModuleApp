@@ -40,6 +40,16 @@
         android:textSize="16dp" />
 
 
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="WEB Test"
+        android:textColor="@color/colorAccent"
+        android:textSize="16dp" />
+
+
+
 
 
 
