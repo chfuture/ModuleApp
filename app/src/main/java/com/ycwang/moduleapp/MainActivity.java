@@ -10,6 +10,8 @@ import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.callback.NavCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.ycwang.baselib.TestObj;
+import com.ycwang.moduleapp.annotation.AnnotationActivity;
+import com.ycwang.moduleapp.dispatchEvent.activity.view.ModuleMainActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -83,6 +85,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ARouter.getInstance().build("/web/WebActivity").navigation();
+            }
+        });
+
+
+        findViewById(R.id.btn_6).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,AnnotationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        findViewById(R.id.btn_7).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,ModuleMainActivity.class);
+                startActivity(intent);
             }
         });
 

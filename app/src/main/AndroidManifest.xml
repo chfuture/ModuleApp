@@ -18,6 +18,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".fragment.ViewPagerActivity" />
+        <activity android:name=".annotation.AnnotationActivity" />
+        <activity android:name=".dispatchEvent.activity.view.ModuleMainActivity" />
+        <activity android:name=".dispatchEvent.activity.ModuleManagerActivity" />
     </application>
 
 </manifest>

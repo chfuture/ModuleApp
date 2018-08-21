@@ -48,6 +48,24 @@
         android:textColor="@color/colorAccent"
         android:textSize="16dp" />
 
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ANNOTATION Test"
+        android:textColor="@color/colorAccent"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/btn_7"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Module Activity Test"
+        android:textColor="@color/colorAccent"
+        android:textSize="16dp" />
+
+
+
 
 
 
