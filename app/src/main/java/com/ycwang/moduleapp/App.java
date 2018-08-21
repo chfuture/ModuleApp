@@ -6,6 +6,11 @@ import android.content.Context;
 import android.os.Bundle;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.ycwang.moduleApp.ModuleImpl;
+import com.ycwang.moduleapp.global.MainPageConfig;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * @author ycwang.
@@ -18,7 +23,7 @@ public class App extends Application {
     private static Context context;
 
 
-    public static Activity getActivity() {
+    public static Activity getTopActivity() {
         return activity;
     }
 
@@ -73,5 +78,33 @@ public class App extends Application {
 
             }
         });
+
+        loadModuleApp();
+    }
+
+
+    public void loadModuleApp() {
+        for (String s : MainPageConfig.MODULE_APP) {
+            try {
+                Class clazz = Class.forName(s);
+                Object imp = clazz.newInstance();
+                if (imp instanceof ModuleImpl) {
+                    Method m = clazz.getDeclaredMethod("onLoad", Application.class);
+                    m.invoke(imp, this);
+                }
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            }
+        }
+
+
     }
 }

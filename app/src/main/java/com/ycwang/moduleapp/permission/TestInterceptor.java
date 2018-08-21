@@ -35,7 +35,7 @@ public class TestInterceptor implements IInterceptor {
     @Override
     public void process(final Postcard postcard, final InterceptorCallback callback) {
 
-        App.getActivity().runOnUiThread(new Runnable() {
+        App.getTopActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 // 拦截 /test/myliba 的跳转
@@ -43,7 +43,7 @@ public class TestInterceptor implements IInterceptor {
                     Log.e("ycwang", "您需要进行登录才能使用该功能");
                     Log.e("ycwang", "需要SD卡权限才可以进入该页面");
 
-                    AndPermission.with(App.getActivity())
+                    AndPermission.with(App.getTopActivity())
                             .runtime()
                             .permission(Permission.Group.CAMERA)
                             .rationale(new RuntimeRelation())
