@@ -3,7 +3,6 @@ package com.ycwang.mylib1.webUrl;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
@@ -15,7 +14,7 @@ import com.ycwang.mylib1.R;
  * @author ycwang.
  * @date 2018-8-20.
  */
-
+// web 跳转到本地页面 有参数
 @Route(path = "/web/HasCanReceiveURLActivity")
 public class HasCanReceiveURLActivity extends Activity {
 

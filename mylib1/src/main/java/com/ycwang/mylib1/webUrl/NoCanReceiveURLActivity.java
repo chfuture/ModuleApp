@@ -12,7 +12,7 @@ import com.ycwang.mylib1.R;
  * @author ycwang.
  * @date 2018-8-20.
  */
-
+// web跳转到本地页面 无参跳转
 @Route(path = "/web/NoCanReceiveURLActivity")
 public class NoCanReceiveURLActivity extends Activity {
 

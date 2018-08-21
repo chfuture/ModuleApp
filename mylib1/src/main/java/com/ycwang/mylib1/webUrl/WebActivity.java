@@ -12,7 +12,7 @@ import com.ycwang.mylib1.R;
  * @author ycwang.
  * @date 2018-8-20.
  */
-
+// 模拟Web页面
 @Route(path = "/web/WebActivity")
 public class WebActivity extends Activity {
 

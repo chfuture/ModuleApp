@@ -11,7 +11,7 @@ import com.alibaba.android.arouter.facade.callback.NavCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.ycwang.baselib.TestObj;
 import com.ycwang.moduleapp.annotation.AnnotationActivity;
-import com.ycwang.moduleapp.dispatchEvent.activity.view.ModuleMainActivity;
+import com.ycwang.moduleapp.dispatchEvent.activity.view.activity.ModuleMainActivity;
 
 public class MainActivity extends AppCompatActivity {
 
