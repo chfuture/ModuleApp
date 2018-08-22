@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.ycwang.global.MainConstant;
 import com.ycwang.moduleapp.R;
 
 /**
@@ -19,7 +20,7 @@ import com.ycwang.moduleapp.R;
  * @date 2018-8-14.
  */
 
-@Route(path = "/fragment/my")
+@Route(path = MainConstant.APP_MODULE_TO_MY)
 public class MyFragment extends Fragment {
 
     TextView txwFragment;

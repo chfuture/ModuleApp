@@ -10,6 +10,7 @@ import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.callback.NavCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.ycwang.baselib.TestObj;
+import com.ycwang.global.MainConstant;
 import com.ycwang.moduleapp.annotation.AnnotationActivity;
 import com.ycwang.moduleapp.dispatchEvent.activity.view.activity.ModuleMainActivity;
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ARouter.getInstance().build("/url/test")
+                ARouter.getInstance().build(MainConstant.MYLIB1_MODULE_MAIN_1)
                         .withString("url", "来自MainActivity的URL")
                         .withString("title", "来自MainActivity的TITLE").navigation();
             }
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ARouter.getInstance().build("/hello/mylib2")
+                ARouter.getInstance().build(MainConstant.MYLIB2_MODULE_MAIN)
                         .withString("url", "来自MainActivity的URL")
                         .withString("title", "来自MainActivity的TITLE")
                         .navigation();
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ARouter.getInstance().build("/test/myliba")
+                ARouter.getInstance().build(MainConstant.MYLIB1_MODULE_MAIN_2)
                         .withSerializable("obj", new TestObj("ycwang", "河北", 19))
 //                        .greenChannel() // 无视拦截器
                         .navigation(MainActivity.this, 666);
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ARouter.getInstance().build("/fragment/main").navigation(MainActivity.this,
+                ARouter.getInstance().build(MainConstant.APP_MODULE_TO_MAIN).navigation(MainActivity.this,
                         new NavCallback() {
 
                             @Override
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ARouter.getInstance().build("/web/WebActivity").navigation();
+                ARouter.getInstance().build(MainConstant.WEB_MODULE_MAIN).navigation();
             }
         });
 

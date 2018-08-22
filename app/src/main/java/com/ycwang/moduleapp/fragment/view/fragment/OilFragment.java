@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.ycwang.global.MainConstant;
 import com.ycwang.moduleapp.R;
 
 /**
@@ -17,7 +18,7 @@ import com.ycwang.moduleapp.R;
  * @date 2018-8-14.
  */
 
-@Route(path = "/fragment/oil")
+@Route(path = MainConstant.APP_MODULE_TO_OIL)
 public class OilFragment extends Fragment {
 
 

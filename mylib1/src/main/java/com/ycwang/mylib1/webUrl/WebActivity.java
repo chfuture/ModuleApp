@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.webkit.WebView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.ycwang.global.MainConstant;
 import com.ycwang.mylib1.R;
 
 /**
@@ -13,7 +14,7 @@ import com.ycwang.mylib1.R;
  * @date 2018-8-20.
  */
 // 模拟Web页面
-@Route(path = "/web/WebActivity")
+@Route(path = MainConstant.WEB_MODULE_MAIN)
 public class WebActivity extends Activity {
 
     WebView webView;

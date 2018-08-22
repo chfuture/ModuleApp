@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.ycwang.global.MainConstant;
 import com.ycwang.mylib1.R;
 
 /**
@@ -15,7 +16,7 @@ import com.ycwang.mylib1.R;
  * @date 2018-8-20.
  */
 // web 跳转到本地页面 有参数
-@Route(path = "/web/HasCanReceiveURLActivity")
+@Route(path = MainConstant.WEB_MODULE_WITH_DATA)
 public class HasCanReceiveURLActivity extends Activity {
 
     TextView textView;

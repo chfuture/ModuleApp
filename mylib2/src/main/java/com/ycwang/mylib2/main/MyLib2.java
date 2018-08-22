@@ -7,10 +7,11 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.ycwang.global.MainConstant;
 import com.ycwang.mylib2.R;
 
 
-@Route(path = "/hello/mylib2")
+@Route(path = MainConstant.MYLIB2_MODULE_MAIN)
 public class MyLib2 extends AppCompatActivity {
 
     @Autowired

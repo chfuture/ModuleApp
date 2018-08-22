@@ -14,13 +14,14 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.ycwang.global.MainConstant;
 import com.ycwang.moduleapp.R;
 
 /**
  * @author ycwang.
  * @date 2018-8-14.
  */
-@Route(path = "/fragment/home")
+@Route(path = MainConstant.APP_MODULE_TO_HOME)
 public class HomeFragment extends Fragment {
 
     TextView txwFragment;

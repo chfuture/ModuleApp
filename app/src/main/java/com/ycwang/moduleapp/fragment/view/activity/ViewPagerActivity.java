@@ -18,7 +18,7 @@ import com.ycwang.moduleapp.global.MainPageConfig;
  * @author ycwang.
  * @date 2018-8-14.
  */
-@Route(path = "/fragment/main")
+@Route(path = MainConstant.APP_MODULE_TO_MAIN)
 public class ViewPagerActivity extends FragmentActivity {
 
     private Fragment[] fragments = new Fragment[4];
@@ -38,15 +38,15 @@ public class ViewPagerActivity extends FragmentActivity {
 
         Bundle bundle = new Bundle();
         bundle.putString("ycwang", "======");
-        fragment = (Fragment) ARouter.getInstance().build("/fragment/home")
+        fragment = (Fragment) ARouter.getInstance().build(MainConstant.APP_MODULE_TO_HOME)
                 // 向Fragment中传递参数
                 .withBundle("key", bundle).navigation();
         fragments[0] = fragment;
         fragment = (Fragment) ARouter.getInstance().build(MainConstant.APP_MODULE_TO_DISCOVERY).navigation();
         fragments[1] = fragment;
-        fragment = (Fragment) ARouter.getInstance().build("/fragment/my").navigation();
+        fragment = (Fragment) ARouter.getInstance().build(MainConstant.APP_MODULE_TO_MY).navigation();
         fragments[2] = fragment;
-        fragment = (Fragment) ARouter.getInstance().build("/fragment/oil").navigation();
+        fragment = (Fragment) ARouter.getInstance().build(MainConstant.APP_MODULE_TO_OIL).navigation();
         fragments[3] = fragment;
 
 

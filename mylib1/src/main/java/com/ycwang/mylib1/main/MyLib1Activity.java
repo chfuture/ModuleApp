@@ -8,16 +8,17 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.ycwang.global.MainConstant;
 import com.ycwang.mylib1.R;
 import com.ycwang.mylib1.permissioncheck.PermissionCheckActivity;
 import com.ycwang.mylib1.waiter.HelloService;
 
 
-@Route(path = "/url/test")
+@Route(path = MainConstant.MYLIB1_MODULE_MAIN_1)
 public class MyLib1Activity extends AppCompatActivity {
 
 
-    @Autowired(name = "/single/service")
+    @Autowired(name = MainConstant.WAITER_MODULE_SAY_HELLO)
     HelloService helloService;
 
 

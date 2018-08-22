@@ -11,6 +11,7 @@ import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.ycwang.baselib.TestObj;
+import com.ycwang.global.MainConstant;
 import com.ycwang.mylib1.R;
 
 /**
@@ -18,7 +19,7 @@ import com.ycwang.mylib1.R;
  * @date 2018-8-13.
  */
 
-@Route(path = "/test/myliba")
+@Route(path = MainConstant.MYLIB1_MODULE_MAIN_2)
 public class MyLibAActivity extends Activity {
 
     @Autowired(name = "obj")

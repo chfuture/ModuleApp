@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.ycwang.global.MainConstant;
 import com.ycwang.mylib1.R;
 
 /**
@@ -13,7 +14,7 @@ import com.ycwang.mylib1.R;
  * @date 2018-8-20.
  */
 // web跳转到本地页面 无参跳转
-@Route(path = "/web/NoCanReceiveURLActivity")
+@Route(path = MainConstant.WEB_MODULE_WITH_NO_DATA)
 public class NoCanReceiveURLActivity extends Activity {
 
 
