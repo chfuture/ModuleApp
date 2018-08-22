@@ -14,6 +14,8 @@ android {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
+
+        flavorDimensions "versionCode"
     }
     buildTypes {
         release {
@@ -22,7 +24,39 @@ android {
         }
     }
 
+
+    productFlavors {
+        baidu {
+            manifestPlaceholders = [MTA_CHANNEL_VALUE: "badiu"]
+        }
+
+        _91 {
+            manifestPlaceholders = [MTA_CHANNEL_VALUE: "91"]
+            buildConfigField('String', "ENV", ENV)
+        }
+
+        wandoujia {
+            manifestPlaceholders = [MTA_CHANNEL_VALUE: "wandoujia"]
+        }
+
+        xiaomi {
+            manifestPlaceholders = [MTA_CHANNEL_VALUE: "xiaomi"]
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def fileName = "Channel${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+            outputFileName = fileName
+        }
+    }
+
 }
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')

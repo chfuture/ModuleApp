@@ -23,6 +23,11 @@
         <activity android:name=".annotation.AnnotationActivity" />
         <activity android:name=".dispatchEvent.activity.view.activity.ModuleMainActivity" />
 
+        <meta-data
+            android:name="MTA_CHANNEL"
+            android:value="${MTA_CHANNEL_VALUE}" />
+
+
     </application>
 
 </manifest>

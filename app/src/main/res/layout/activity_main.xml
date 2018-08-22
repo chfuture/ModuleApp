@@ -11,7 +11,7 @@
         android:id="@+id/btn_1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="简单的跳转MyLib1"
+        android:text="ARouter 简单跳转"
         android:textColor="@color/colorAccent"
         android:textSize="16dp" />
 
@@ -19,7 +19,7 @@
         android:id="@+id/btn_2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="简单的跳转MyLib2"
+        android:text="ARouter 简单跳转 携带参数"
         android:textColor="@color/colorAccent"
         android:textSize="16dp" />
 
@@ -27,7 +27,7 @@
         android:id="@+id/btn_3"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="传递Object对象"
+        android:text="ARouter 简单跳转 携带Object"
         android:textColor="@color/colorAccent"
         android:textSize="16dp" />
 
@@ -35,7 +35,7 @@
         android:id="@+id/btn_4"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Fragment Test"
+        android:text="Fragment"
         android:textColor="@color/colorAccent"
         android:textSize="16dp" />
 
@@ -44,7 +44,7 @@
         android:id="@+id/btn_5"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="WEB Test"
+        android:text="WEB 跳转本地页面测试"
         android:textColor="@color/colorAccent"
         android:textSize="16dp" />
 
@@ -52,7 +52,7 @@
         android:id="@+id/btn_6"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="ANNOTATION Test"
+        android:text="注解测试 失败"
         android:textColor="@color/colorAccent"
         android:textSize="16dp" />
 
@@ -60,15 +60,9 @@
         android:id="@+id/btn_7"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Module Activity Test"
+        android:text="Activity 事件分发"
         android:textColor="@color/colorAccent"
         android:textSize="16dp" />
-
-
-
-
-
-
 
 
 </LinearLayout>
