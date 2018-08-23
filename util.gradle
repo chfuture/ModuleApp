@@ -1,0 +1,13 @@
+def getVersionNameAdvanced() {
+    def xmlFile = project.file("AndroidManifest.xml")
+    def rootManifest = new XmlSlurper().parse(xmlFile)
+    return rootManifest['@android:versionName']
+}
+
+
+ext {
+    // 此段花括号中代码是闭包
+    // 除了 ext.xxx=value 这种定义方法外，还可以使用 ext{}这种书写方法。
+    // ext{}不是 ext(Closure)对应的函数调用。但是 ext{}中的{}确实是闭包。
+    getVersionNameAdvanced = this.&getVersionNameAdvanced
+}

@@ -51,6 +51,15 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+
+            java.srcDirs += 'src/main/module'
+            res.srcDirs += 'src/main/moduleres'
+
+        }
+    }
+
 }
 
 def releaseTime() {

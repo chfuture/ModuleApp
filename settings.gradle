@@ -1,1 +1,29 @@
+// include 也是一个函数
 include ':app', ':mylib1', ':baselib', ':mylib2'
+
+//在 settings.gradle 中，则输出"In settings,gradle id is"
+println "In posdevice, gradle id is " + gradle.hashCode()
+println "Home Dir:" + gradle.gradleHomeDir
+println "User Home Dir:" + gradle.gradleUserHomeDir
+println "Parent: " + gradle.parent
+
+
+def initMinshengGradleEnvironment() {
+    println "initialize Minsheng Gradle Environment ....."
+
+    Properties properties = new Properties()
+    //local.properites 也放在 posdevice 目录下
+    File propertyFile = new File(rootDir.getAbsolutePath() + "/local.properties")
+    properties.load(propertyFile.newDataInputStream())
+
+//    gradle.ext.api = properties.getProperty('sdk.api')
+    gradle.ext.sdkDir = properties.getProperty('sdk.dir')
+    gradle.ext.ndkDir = properties.getProperty('ndk.dir')
+//    gradle.ext.localDir = properties.getProperty('local.dir')
+    //指定 debug keystore 文件的位置，debug 版 apk 签名的时候会用到
+//    gradle.ext.debugKeystore = properties.getProperty('debug.keystore')
+
+    println "initialize Minsheng Gradle Environment completes..."
+}
+
+initMinshengGradleEnvironment()
