@@ -1,3 +1,5 @@
+import groovy.util.XmlSlurper  //解析 XML 时候要引入这个 groovy的 package
+
 def getVersionNameAdvanced() {
     def xmlFile = project.file("AndroidManifest.xml")
     def rootManifest = new XmlSlurper().parse(xmlFile)
