@@ -6,6 +6,10 @@ package com.ycwang.global;
  */
 public class MainConstant {
 
+
+    public static final String TAG = "ycwang";
+
+
     /**
      * fragment
      */
@@ -15,6 +19,9 @@ public class MainConstant {
     public static final String APP_MODULE_TO_OIL = "/app/fragment/oil";
     public static final String APP_MODULE_TO_MY = "/app/fragment/my";
 
+
+
+    public static final String APP_MODULE_ROOM="/app/moduleapp/RoomActivity";
 
     /**
      * module mylib2
@@ -32,13 +39,13 @@ public class MainConstant {
     /**
      * module web
      */
-    public static final String WEB_MODULE_MAIN="/web/WebActivity";
-    public static final String WEB_MODULE_WITH_NO_DATA="/web/NoCanReceiveURLActivity";
-    public static final String WEB_MODULE_WITH_DATA="/web/HasCanReceiveURLActivity";
+    public static final String WEB_MODULE_MAIN = "/web/WebActivity";
+    public static final String WEB_MODULE_WITH_NO_DATA = "/web/NoCanReceiveURLActivity";
+    public static final String WEB_MODULE_WITH_DATA = "/web/HasCanReceiveURLActivity";
 
 
     /**
      * waiter
      */
-    public static final String WAITER_MODULE_SAY_HELLO="/single/service";
+    public static final String WAITER_MODULE_SAY_HELLO = "/single/service";
 }

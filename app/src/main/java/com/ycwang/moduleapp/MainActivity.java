@@ -13,6 +13,7 @@ import com.ycwang.baselib.TestObj;
 import com.ycwang.global.MainConstant;
 import com.ycwang.moduleapp.annotation.AnnotationActivity;
 import com.ycwang.moduleapp.dispatchEvent.activity.view.activity.ModuleMainActivity;
+import com.ycwang.moduleapp.service.ServiceActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_6).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,AnnotationActivity.class);
+                Intent intent = new Intent(MainActivity.this, AnnotationActivity.class);
                 startActivity(intent);
             }
         });
@@ -102,8 +103,26 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_7).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,ModuleMainActivity.class);
+                Intent intent = new Intent(MainActivity.this, ModuleMainActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.btn_8).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ServiceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        findViewById(R.id.btn_9).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+
             }
         });
 
