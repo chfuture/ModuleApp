@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.ycwang.moduleapp">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:name=".global.App"
         android:allowBackup="true"
@@ -24,14 +27,8 @@
         <activity android:name=".dispatchEvent.activity.view.activity.ModuleMainActivity" />
         <activity android:name=".service.ServiceActivity" />
         <activity android:name=".room.RoomActivity" />
-
-        <meta-data
-            android:name="MTA_CHANNEL"
-            android:value="${MTA_CHANNEL_VALUE}" />
-
-
+        <activity android:name=".easyPermission.PermissionActivity1" />
         <service android:name=".service.LocalService1" />
-        <service android:name=".service.ForegroundService" />
     </application>
 
 </manifest>

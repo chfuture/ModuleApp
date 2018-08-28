@@ -18,10 +18,8 @@ public class MainConstant {
     public static final String APP_MODULE_TO_DISCOVERY = "/app/fragment/discovery";
     public static final String APP_MODULE_TO_OIL = "/app/fragment/oil";
     public static final String APP_MODULE_TO_MY = "/app/fragment/my";
-
-
-
     public static final String APP_MODULE_ROOM="/app/moduleapp/RoomActivity";
+    public static final String APP_MODULE_EASY_PERMISSION="/app/moduleapp/PermissionActivity";
 
     /**
      * module mylib2

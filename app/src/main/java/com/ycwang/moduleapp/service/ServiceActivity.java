@@ -24,25 +24,7 @@ public class ServiceActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service);
-        findViewById(R.id.btn_start_service).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ServiceActivity.this, ForegroundService.class);
-                startService(intent);
-//                bindService(new Intent(ServiceActivity.this, LocalService1.class),
-//                        serviceConnection,
-//                        Service.BIND_AUTO_CREATE);
-            }
-        });
 
-        findViewById(R.id.btn_stop_service).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ServiceActivity.this, ForegroundService.class);
-                stopService(intent);
-//                unbindService(serviceConnection);
-            }
-        });
 
 
     }

@@ -25,31 +25,31 @@ android {
     }
 
 
-    productFlavors {
-        baidu {
-            manifestPlaceholders = [MTA_CHANNEL_VALUE: "badiu"]
-        }
-
-        _91 {
-            manifestPlaceholders = [MTA_CHANNEL_VALUE: "91"]
-            buildConfigField('String', "ENV", ENV)
-        }
-
-        wandoujia {
-            manifestPlaceholders = [MTA_CHANNEL_VALUE: "wandoujia"]
-        }
-
-        xiaomi {
-            manifestPlaceholders = [MTA_CHANNEL_VALUE: "xiaomi"]
-        }
-    }
-
-    applicationVariants.all { variant ->
-        variant.outputs.all {
-            def fileName = "Channel${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
-            outputFileName = fileName
-        }
-    }
+//    productFlavors {
+//        baidu {
+//            manifestPlaceholders = [MTA_CHANNEL_VALUE: "badiu"]
+//        }
+//
+//        _91 {
+//            manifestPlaceholders = [MTA_CHANNEL_VALUE: "91"]
+//            buildConfigField('String', "ENV", ENV)
+//        }
+//
+//        wandoujia {
+//            manifestPlaceholders = [MTA_CHANNEL_VALUE: "wandoujia"]
+//        }
+//
+//        xiaomi {
+//            manifestPlaceholders = [MTA_CHANNEL_VALUE: "xiaomi"]
+//        }
+//    }
+//
+//    applicationVariants.all { variant ->
+//        variant.outputs.all {
+//            def fileName = "Channel${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+//            outputFileName = fileName
+//        }
+//    }
 
     sourceSets {
         main {

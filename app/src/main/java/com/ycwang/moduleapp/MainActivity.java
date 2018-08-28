@@ -120,9 +120,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_9).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-
+                ARouter.getInstance().build(MainConstant.APP_MODULE_EASY_PERMISSION).navigation();
             }
         });
 

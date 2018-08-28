@@ -28,10 +28,8 @@ public interface UserDao {
     @Delete
     void delete(User... users);
 
-    @Query("select * from user")
-    void query();
 
-    @Query("select first_name,age from user")
-    List<User> searchAllSimpleUsers();
+
+
 
 }
