@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <application
         android:name=".global.App"
@@ -28,7 +29,12 @@
         <activity android:name=".service.ServiceActivity" />
         <activity android:name=".room.RoomActivity" />
         <activity android:name=".easyPermission.PermissionActivity1" />
+        <activity android:name=".test.IntentActivity" />
+        <activity android:name=".test.BitmapActivty" />
+        <activity android:name=".test.MessagerActivity" />
+
         <service android:name=".service.LocalService1" />
+        <service android:name=".test.MessageService" />
     </application>
 
 </manifest>

@@ -1,8 +1,16 @@
 package com.ycwang.moduleapp;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.os.Environment;
+import android.provider.AlarmClock;
+import android.provider.CalendarContract;
+import android.provider.ContactsContract;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
@@ -14,6 +22,12 @@ import com.ycwang.global.MainConstant;
 import com.ycwang.moduleapp.annotation.AnnotationActivity;
 import com.ycwang.moduleapp.dispatchEvent.activity.view.activity.ModuleMainActivity;
 import com.ycwang.moduleapp.service.ServiceActivity;
+import com.ycwang.moduleapp.test.BitmapActivty;
+import com.ycwang.moduleapp.test.MessagerActivity;
+
+import java.io.File;
+import java.net.URI;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -120,7 +134,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_9).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ARouter.getInstance().build(MainConstant.APP_MODULE_EASY_PERMISSION).navigation();
+//                ARouter.getInstance().build(MainConstant.APP_MODULE_EASY_PERMISSION).navigation();
+//                startActivity(new Intent(MainActivity.this, BitmapActivty.class));
+                startActivity(new Intent(MainActivity.this, MessagerActivity.class));
             }
         });
 
@@ -130,20 +146,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
+        if (resultCode != RESULT_OK) {
+            return;
+        }
         switch (requestCode) {
             case 666:
-
                 if (data != null) {
                     Log.e("ycwang", String.valueOf(resultCode));
                     Log.e("ycwang", data.getStringExtra("ycwang"));
                 }
-
-
                 break;
+
             default:
                 break;
         }
     }
+
 
 }

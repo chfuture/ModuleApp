@@ -53,5 +53,13 @@ public class LocalService1 extends Service {
         super.onDestroy();
     }
 
+    @Override
+    public boolean onUnbind(Intent intent) {
+        return true;
+    }
 
+    @Override
+    public void onRebind(Intent intent) {
+        super.onRebind(intent);
+    }
 }
