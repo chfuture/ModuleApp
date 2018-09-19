@@ -12,13 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="ARouter 简单跳转"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/color_select_test"
         android:textSize="16dp" />
 
     <Button
         android:id="@+id/btn_2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@drawable/inset_test"
         android:text="ARouter 简单跳转 携带参数"
         android:textColor="@color/colorAccent"
         android:textSize="16dp" />
@@ -79,8 +80,6 @@
         android:text="EasyPermission"
         android:textColor="@color/colorAccent"
         android:textSize="16dp" />
-
-
 
 
 </LinearLayout>
