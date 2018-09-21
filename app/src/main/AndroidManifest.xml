@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.ycwang.moduleapp">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:name=".global.App"
@@ -32,6 +33,10 @@
         <activity android:name=".test.IntentActivity" />
         <activity android:name=".test.BitmapActivty" />
         <activity android:name=".test.MessagerActivity" />
+        <activity
+            android:name=".test.NotificationTestActivity">
+        </activity>
+        <activity android:name=".test.AlertDialogActivity" />
 
         <service android:name=".service.LocalService1" />
         <service android:name=".test.MessageService" />

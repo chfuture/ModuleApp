@@ -24,6 +24,7 @@ import com.ycwang.moduleapp.dispatchEvent.activity.view.activity.ModuleMainActiv
 import com.ycwang.moduleapp.service.ServiceActivity;
 import com.ycwang.moduleapp.test.BitmapActivty;
 import com.ycwang.moduleapp.test.MessagerActivity;
+import com.ycwang.moduleapp.test.NotificationTestActivity;
 
 import java.io.File;
 import java.net.URI;
@@ -136,7 +137,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 //                ARouter.getInstance().build(MainConstant.APP_MODULE_EASY_PERMISSION).navigation();
 //                startActivity(new Intent(MainActivity.this, BitmapActivty.class));
-                startActivity(new Intent(MainActivity.this, MessagerActivity.class));
+//                startActivity(new Intent(MainActivity.this, MessagerActivity.class));
+
+                NotificationTestActivity.launch(MainActivity.this);
+
             }
         });
 
