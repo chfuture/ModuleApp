@@ -37,6 +37,7 @@
             android:name=".test.NotificationTestActivity">
         </activity>
         <activity android:name=".test.AlertDialogActivity" />
+        <activity android:name=".test.DataStorageActivity" />
 
         <service android:name=".service.LocalService1" />
         <service android:name=".test.MessageService" />

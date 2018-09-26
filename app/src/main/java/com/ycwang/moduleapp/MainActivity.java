@@ -23,6 +23,7 @@ import com.ycwang.moduleapp.annotation.AnnotationActivity;
 import com.ycwang.moduleapp.dispatchEvent.activity.view.activity.ModuleMainActivity;
 import com.ycwang.moduleapp.service.ServiceActivity;
 import com.ycwang.moduleapp.test.BitmapActivty;
+import com.ycwang.moduleapp.test.DataStorageActivity;
 import com.ycwang.moduleapp.test.MessagerActivity;
 import com.ycwang.moduleapp.test.NotificationTestActivity;
 
@@ -139,8 +140,9 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(new Intent(MainActivity.this, BitmapActivty.class));
 //                startActivity(new Intent(MainActivity.this, MessagerActivity.class));
 
-                NotificationTestActivity.launch(MainActivity.this);
+//                NotificationTestActivity.launch(MainActivity.this);
 
+                DataStorageActivity.launch(MainActivity.this);
             }
         });
 
