@@ -18,6 +18,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.ycwang.moduleapp.R;
@@ -123,6 +124,14 @@ public class AnimationTestActivity extends Activity {
                 windowManager.addView(button, params);
             }
         });
+
+
+        // 测试
+        String s = "abcde你好";
+        EditText editText = findViewById(R.id.edx);
+        editText.setText(s);
+        editText.setSelection(s.length());
+
 
     }
 
