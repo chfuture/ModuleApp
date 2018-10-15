@@ -1,5 +1,8 @@
 package com.ycwang.moduleapp.test;
 
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+
 import java.io.Serializable;
 
 /**
@@ -20,6 +23,15 @@ public class MyUser implements Serializable {
         this.age = age;
         this.name = name;
         this.address = address;
+
+        new CustomerOnGesyureListener(){
+            @Override
+            public void onLongPress(MotionEvent e) {
+
+            }
+        };
+
+
     }
 
     @Override

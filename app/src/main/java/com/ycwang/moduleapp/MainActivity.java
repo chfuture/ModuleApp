@@ -27,6 +27,7 @@ import com.ycwang.moduleapp.test.BitmapActivty;
 import com.ycwang.moduleapp.test.DataStorageActivity;
 import com.ycwang.moduleapp.test.MessagerActivity;
 import com.ycwang.moduleapp.test.NotificationTestActivity;
+import com.ycwang.moduleapp.test.ThreadPoolActivity;
 
 import java.io.File;
 import java.net.URI;
@@ -145,8 +146,9 @@ public class MainActivity extends AppCompatActivity {
 
 //                DataStorageActivity.launch(MainActivity.this);
 
-                startActivity(new Intent(MainActivity.this, AnimationTestActivity.class));
+//                startActivity(new Intent(MainActivity.this, AnimationTestActivity.class));
 
+                ThreadPoolActivity.launch(MainActivity.this);
             }
         });
 

@@ -39,6 +39,7 @@
         <activity android:name=".test.AlertDialogActivity" />
         <activity android:name=".test.DataStorageActivity" />
         <activity android:name=".test.AnimationTestActivity" />
+        <activity android:name=".test.ThreadPoolActivity" />
 
         <service android:name=".service.LocalService1" />
         <service android:name=".test.MessageService" />
